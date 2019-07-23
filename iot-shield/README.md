@@ -3,7 +3,7 @@ Lets build a tiny security app **IoT Shield** to protect IoT devices based on so
 
 We have a fancy AI powered system that provides profile data for devices. Based on this information we can detect devices that are behaving suspiciously (were hacked?!) and stop them from accessing sensitive content.
 
-#### Input of the application (input.txt)
+#### Input of the application (input.json)
 Stream of input events are provided in the JSON file, where: 
 * `profile_create` and `profile_update` events cover profile lifecycle,
 * `request` events represent requests that we're observing for various devices.
@@ -29,7 +29,7 @@ The app must output the response to each request.
 ##### Rule 3
 If a device has a `default_policy` of `block` and sends invalid request(s) it should be moved to quarantine by sending a `quarantine` action.
 
-#### Output of the application (output.txt)
+#### Output of the application (output.json)
 - Responses (allow/block/quarantine actions for each request)
 ```
 {"request_id": "66d03a6947c048009f0b34260f35f3bd", "action": "allow"}
