@@ -30,7 +30,7 @@ Profile updates (`profile_update`) override `whitelist` and `blacklist` values.
 The app must output the response to each request (`url`). Response value should be based on current state of profile.
 
 ##### Rule 4
-If a device has a `default_policy` of `block` and sends invalid request(s) it should be moved to quarantine by sending a `quarantine` action.
+If a device has a `default_policy` of `block` and sends invalid (for that profile) request(s) it should be moved to quarantine by sending a `quarantine` action.
 
 #### Output of the application (output.json)
 - Responses (allow/block/quarantine actions for each request)
